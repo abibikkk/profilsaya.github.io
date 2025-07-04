@@ -1,0 +1,176 @@
+
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profil Saya</title>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+               background: linear-gradient(-45deg, #47519e, #5bbd3d, #2135cd, #acb525);
+                color: white;
+                scroll-behavior: smooth;
+            }
+
+            section {
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .hero {
+                background: url('https://i.ibb.co/1Z1cVg5/sample-profile.jpg') no-repeat center center/cover;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero .content {
+                background-color: rgba(0,0,0,0.6);
+                padding: 30px;
+                border-radius: 20px;
+            }
+
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 4px solid #fff;
+                margin-bottom: 20px;
+            }
+
+            .about, .hobbies, .contact {
+                background-color: #47519e;
+                margin: 20px auto;
+                border-radius: 15px;
+                max-width: 800px;
+                padding: 40px;
+            }
+
+            .hobi-item {
+                margin: 20px 0;
+            }
+
+            .hobi-item img {
+                width: 100%;
+                max-width: 400px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            }
+
+            .sosial a {
+                display: inline-block;
+                margin: 10px;
+                padding: 10px 20px;
+                background-color: #16a085;
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+
+            .sosial a:hover {
+                background-color: #1abc9c;
+            }
+
+            .animate {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 1s ease;
+            }
+
+            .animate.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+             nav {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+        </style>
+    </head>
+    <body>
+        <nav>
+    <h1>Profil Abi</h1>
+        </nav>
+        
+
+       
+        <section class="hero">
+            <div class="content animate">
+                <img src="muka2.jpg" alt="Foto Profil" class="profile-pic"/>
+                <h1>Halo, Saya Abi Sabban</h1>
+                <p>Saya anak mamak dan bapak, saya suka seni musik dan teknologi cuanggiehh! Yuk, kenalan lebih dekat!.</p>
+            </div>
+        </section>
+
+        
+        <section class="about animate">
+            <img src="logo tkj.jpg" width="300px" height="160px">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah salah satu anak dari mama bapak kandung saya, saya lahir 15 Agustus 2009. Saya juga seorang siswa di SMK NEGERI 5 Balikpapan Timur, saat ini saya menduduki bangku kelas 11. Jurusan saya yaitu Teknik Komputer dan Jaringan (TKJ).
+            </p>
+        </section>
+
+        
+        <section class="hobbies animate">
+            <h2>Hobi Saya</h2>
+            <div class="hobi-item">
+                <img src="download.jpg" alt="Hobi 1">
+                <p>Game - Memainkan Game Free fire dan yang lainnya seperti MLBB, PUBG, dll</p>
+            </div>
+            <div class="hobi-item">
+                <img src="Screenshot 2025-07-04 205542.png" alt="Hobi 2">
+                <p> Musik - Memainkan alat musik drum, Saya bisa genre Pop Punk dan Genre yang santai</p>
+            </div>
+        </section>
+
+        
+        <section class="contact animate">
+            <h2>Follow Saya!!</h2>
+            <p>Temui saya di sosial media:</p>
+            <div class="sosial">
+                <a href="https://www.instagram.com/abiisbbn_?igsh=MXhrYnh0N3I5aWJ2NA==" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@abibikkkk?_t=ZS-8xiCjCwEyHA&_r=1 target="_blank">TikTok</a>
+                <a href="https://open.spotify.com/user/31k5icsn7wn7xyc4grkptwgt3dr4?si=IIisXoJIRoyZGArXN50Tpg" target="_blank">Spotify</a>
+            </div>
+        </section>
+
+        <script>
+            const anims = document.querySelectorAll(".animate");
+            window.addEventListener("scroll", () => {
+                anims.forEach(el => {
+                    const pos = el.getBoundingClientRect().top;
+                    if (pos < window.innerHeight - 100) {
+                        el.classList.add("show");
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
